@@ -49,7 +49,7 @@ public class Scrabble {
 	// Checks if the given word is in the dictionary.
 	public static boolean isWordInDictionary(String word) {
 		for (int i = 0; i < DICTIONARY.length; i++) {
-			if (word==DICTIONARY[i]) {
+			if (word.equals(DICTIONARY[i])) {
 				return true;
 			}
 		}
@@ -142,11 +142,19 @@ public class Scrabble {
 			// Gets the user's input, which is all the characters entered by 
 			// the user until the user enter the ENTER character.
 			String input = in.readString();
-			//// Replace the following break statement with code
-			//// that completes the game playing loop
-			break;
+			if(input.equals("e")){
+				break;
+			}
+			if (input.equals("n")) {
+				String hand=createHand();
+				playHand(hand);
+			}
+			else{
+				System.err.println("error");
+			}
 		}
 	}
+	
 
 	public static void main(String[] args) {
 		//// Uncomment the test you want to run

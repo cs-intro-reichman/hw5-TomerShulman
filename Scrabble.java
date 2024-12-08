@@ -104,7 +104,7 @@ public class Scrabble {
 			String input = in.readString();
 			//// Replace the following break statement with code
 			//// that completes the hand playing loop
-			if(input=="."){
+			if(input.equals(".")){
 				break;
 			}
 			System.out.print(input);
@@ -115,7 +115,7 @@ public class Scrabble {
 				int thisScore=wordScore(input);
 				score+= thisScore;
 			    hand=MyString.remove(hand, input);
-				System.out.println(input+ " earned "+ thisScore +" points. Score: "+ score +" points");
+				System.out.println(input+ " earned "+ thisScore +" points. Score: "+ score +" points\n");
 			}
 			else{
 			System.out.println("No such word in the dictionary. Try again.");

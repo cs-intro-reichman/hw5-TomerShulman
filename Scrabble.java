@@ -145,12 +145,12 @@ public class Scrabble {
 			if(input.equals("e")){
 				break;
 			}
-			if (input.equals("n")) {
+			else if (input.equals("n")) {
 				String hand=createHand();
 				playHand(hand);
 			}
 			else{
-				System.err.println("error");
+				System.out.println("error");
 			}
 		}
 	}

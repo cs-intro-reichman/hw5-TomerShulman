@@ -107,6 +107,7 @@ public class Scrabble {
 			if(input.equals(".")){
 				break;
 			}
+			System.out.println(input);
 			if (!MyString.subsetOf(input, hand)) {
 				System.err.println("Invalid word. Try again.");
 			}
